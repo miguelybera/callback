@@ -1,6 +1,14 @@
-ctr = 0
-setInterval(function() {
-    ctr += 2;
-document.write(`${ctr} secs, has elapsed...<br>`)
-}, 2000);
-//2000 is millisecond
+let promise = new Promise(function(res, rej){
+    grade = 69;
+    if(grade>=60){
+        res("pass");
+    }else{
+        rej("fail");
+    }
+});
+
+promise.then(function(message){
+    document.write(`You ${message} the subject1 `);
+}).catch(function(message){
+    document.write(`You ${message} the subject 2 `);
+});

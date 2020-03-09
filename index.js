@@ -1,14 +1,4 @@
-let promise = new Promise(function(res, rej){
-    grade = 69;
-    if(grade>=60){
-        res("pass");
-    }else{
-        rej("fail");
-    }
-});
-
-promise.then(function(message){
-    document.write(`You ${message} the subject1 `);
-}).catch(function(message){
-    document.write(`You ${message} the subject 2 `);
-});
+setTimeout(() => {
+ document.write("Customer 1 was entertained...");
+}, 2000);
+document.write("Customer 2 was entertained..");
